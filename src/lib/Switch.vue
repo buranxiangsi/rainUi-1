@@ -1,5 +1,6 @@
 <template>
-  <button @click="toggle" :class="{checked:value}">
+  <button class="raindrop-switch" @click="toggle"
+          :class="{'raindrop-checked':value}">
     <span></span>
   </button>
 </template>
@@ -19,10 +20,10 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $h: 22px;
 $h2: $h - 4px;
-button{
+.raindrop-switch{
   height: $h;
   width: $h*2;
   border: none;
@@ -41,11 +42,11 @@ button{
     transition: all 250ms;
 
   }
-  &.checked{
+  &.raindrop-checked{
     background: #1890ff;
-  }
-  &.checked> span {
-    left: calc(100% - #{$h2} - 2px);
+    > span {
+      left: calc(100% - #{$h2} - 2px);
+    }
   }
   &:focus{
     outline: none;
@@ -53,7 +54,7 @@ button{
   &:active{
     > span{ width: $h2 + 4px;}
   }
-  &.checked:active{
+  &.raindrop-checked:active{
     > span{width: $h2 + 4px; margin-left: -4px;}
   }
 

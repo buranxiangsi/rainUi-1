@@ -2,6 +2,7 @@
   <div>Button示例</div>
   <h1>示例1</h1>
   <div>
+    <Button @click="onClick">click</Button>
     <Button theme="button">button</Button>
     <Button theme="link">link</Button>
     <Button theme="text">text</Button>
@@ -60,5 +61,11 @@
 import Button from "../lib/Button.vue"
 export default {
   components:{ Button },
+  setup(){
+    const onClick=()=>{
+      alert('Hello')
+    }
+    return { onClick }
+  }
 }
 </script>

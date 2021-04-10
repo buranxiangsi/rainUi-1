@@ -1,9 +1,11 @@
 <template>
   <div>Button示例</div>
   <h1>示例1</h1>
-  <Button theme="button">button</Button>
-  <Button theme="link">link</Button>
-  <Button theme="text">text</Button>
+  <div>
+    <Button theme="button">button</Button>
+    <Button theme="link">link</Button>
+    <Button theme="text">text</Button>
+  </div>
   <h1>示例2</h1>
   <div>
     <div>
@@ -39,6 +41,13 @@
       <Button theme="text">normal text</Button>
       <Button theme="text" level="danger">danger text</Button>
     </div>
+  </div>
+  <h1>示例4</h1>
+  <div>
+    <Button disabled>disabled</Button>
+    <Button theme="link" disabled>disabled link</Button>
+    <Button theme="text" disabled>disabled text</Button>
+
   </div>
 </template>
 

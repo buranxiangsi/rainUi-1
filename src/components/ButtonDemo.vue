@@ -1,9 +1,10 @@
 <template>
   <div>Button示例</div>
   <h1>示例</h1>
-  <Button @click="onClick"
-          @focus="onClick"
-          @mouseover="onClick">Hello</Button>
+  <Button>你好</Button>
+  <Button theme="button">你好</Button>
+  <Button theme="link">你好</Button>
+  <Button theme="text">你好</Button>
 </template>
 
 <script lang="ts">

@@ -49,6 +49,10 @@
     <Button theme="text" disabled>disabled text</Button>
 
   </div>
+  <h1>示例5</h1>
+  <div>
+    <Button loading>加载中</Button>
+  </div>
 </template>
 
 <script lang="ts">

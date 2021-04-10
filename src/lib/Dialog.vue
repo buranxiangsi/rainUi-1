@@ -1,4 +1,4 @@
-<template>
+<template v-if="visible">
 <div class="raindrop-dialog-overlay"></div>
 <div class="raindrop-dialog-wrapper">
   <div class="raindrop-dialog">
@@ -12,7 +12,6 @@
       <Button>Cancel</Button>
     </footer>
   </div>
-
 </div>
 </template>
 
@@ -20,6 +19,12 @@
 import Button from "./Button.vue";
 
 export default {
+  props:{
+    visible:{
+      type: Boolean,
+      default: false
+    }
+  },
   components:{
     Button
   }

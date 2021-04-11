@@ -22,7 +22,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .topnav {
-  background: pink;
   display: flex;
   padding: 16px;
   position: fixed;
@@ -32,11 +31,11 @@ export default {
   z-index: 10;
   justify-content: center;
   align-items: center;
-  > .logo {
+  >.logo {
     max-width: 6em;
     margin-right: auto;
   }
-  > .menu {
+  >.menu {
     display: flex;
     white-space: nowrap;
     flex-wrap: nowrap;

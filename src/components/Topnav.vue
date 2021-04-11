@@ -1,10 +1,10 @@
 <template>
   <div class="topnav">
-    <div class="logo">
+    <router-link to="/" class="logo">
       <svg class="icon">
         <use xlink:href="#icon-hail-rain"></use>
       </svg>
-    </div>
+    </router-link>
     <ul class="menu">
       <li>
         <router-link to="/doc">文档</router-link>
@@ -71,7 +71,6 @@ $color: #007974;
     top: 50%;
     transform: translateY(-50%);
     display: none;
-    background: fade_out(black,0.9);
   }
     @media (max-width: 500px) {
       >.menu{display: none;}

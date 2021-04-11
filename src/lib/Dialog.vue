@@ -3,12 +3,12 @@
 <div class="raindrop-dialog-overlay" @click="onClickOverlay"></div>
 <div class="raindrop-dialog-wrapper">
   <div class="raindrop-dialog">
-    <header>标题
+    <header>
+      <slot name="title" />
       <span @click="close" class="raindrop-dialog-close"></span>
     </header>
     <main>
-      <p>第一行字</p>
-      <p>第二行字</p>
+      <slot name="content" />
     </main>
     <footer>
       <Button level="main" @click="ok">OK</Button>

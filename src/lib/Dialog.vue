@@ -1,21 +1,24 @@
 <template>
 <template v-if="visible">
-<div class="raindrop-dialog-overlay" @click="onClickOverlay"></div>
-<div class="raindrop-dialog-wrapper">
-  <div class="raindrop-dialog">
-    <header>
-      <slot name="title" />
-      <span @click="close" class="raindrop-dialog-close"></span>
-    </header>
-    <main>
-      <slot name="content" />
-    </main>
-    <footer>
-      <Button level="main" @click="ok">OK</Button>
-      <Button @click="cancel">Cancel</Button>
-    </footer>
-  </div>
-</div>
+  <Teleport to="body">
+    <div class="raindrop-dialog-overlay" @click="onClickOverlay"></div>
+    <div class="raindrop-dialog-wrapper">
+      <div class="raindrop-dialog">
+        <header>
+          <slot name="title" />
+          <span @click="close" class="raindrop-dialog-close"></span>
+        </header>
+        <main>
+          <slot name="content" />
+        </main>
+        <footer>
+          <Button level="main" @click="ok">OK</Button>
+          <Button @click="cancel">Cancel</Button>
+        </footer>
+      </div>
+    </div>
+  </Teleport>
+
 </template>
 </template>
 

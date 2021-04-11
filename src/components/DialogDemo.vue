@@ -1,20 +1,23 @@
 <template>
   <div>Dialog示例</div>
   <h1>示例1</h1>
-  <Button @click="toggle">toggle</Button>
-  <Dialog v-model:visible="x"
-          :closeOnClickOverlay="false"
-          :ok="f1"
-          :cancel="f2">
+  <div style="position:relative; z-index: 1">
+    <Button @click="toggle">toggle</Button>
+    <Dialog v-model:visible="x"
+            :closeOnClickOverlay="false"
+            :ok="f1"
+            :cancel="f2">
 
-    <template v-slot:content>
-      <strong>Hi</strong>
-      <div>Hi2</div>
-    </template>
-    <template v-slot:title>
-      <strong>加粗的标题</strong>
-    </template>
-  </Dialog>
+      <template v-slot:content>
+        <strong>Hi</strong>
+        <div>Hi2</div>
+      </template>
+      <template v-slot:title>
+        <strong>加粗的标题</strong>
+      </template>
+    </Dialog>
+  </div>
+  <div style="position: relative; z-index: 2; width: 300px; height: 300px;background: red;"></div>
 </template>
 
 <script lang="ts">

@@ -1377,6 +1377,11 @@ magic-string@^0.25.7:
   dependencies:
     sourcemap-codec "^1.4.4"
 
+marked@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.npm.taobao.org/marked/download/marked-2.0.2.tgz#ecfbc20c36bae0db444996c31c224c61d5b30b8c"
+  integrity sha1-7PvCDDa64NtESZbDHCJMYdWzC4w=
+
 media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.npm.taobao.org/media-typer/download/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"

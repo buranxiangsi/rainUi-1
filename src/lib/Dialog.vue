@@ -1,3 +1,4 @@
+<template>
 <template v-if="visible">
 <div class="raindrop-dialog-overlay" @click="onClickOverlay"></div>
 <div class="raindrop-dialog-wrapper">
@@ -15,6 +16,7 @@
     </footer>
   </div>
 </div>
+</template>
 </template>
 
 <script lang="ts">

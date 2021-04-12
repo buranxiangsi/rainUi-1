@@ -1,6 +1,8 @@
 {
-  "name": "raindrop",
-  "version": "0.0.0",
+  "name": "raindrop-1",
+  "version": "0.0.1",
+  "files": ["dist/lib/*"],
+  "main": "dist/lib/raindrop.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build"

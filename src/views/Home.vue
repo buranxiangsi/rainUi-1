@@ -1,16 +1,16 @@
 <template>
-  <div>
+  <div >
     <div class="topnavAndBanner">
       <Topnav />
       <div class="banner">
         <h1>雨滴UI</h1>
-        <h2>一个厉害的UI框架</h2>
+        <h2>一个简单的UI框架</h2>
         <p class="actions">
           <a href="">Github</a>
           <router-link to="/doc">Start</router-link>
         </p>
       </div>
-    </div>
+
     <div class="features">
       <ul>
         <li>
@@ -37,6 +37,7 @@
       </ul>
     </div>
   </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -52,6 +53,7 @@ $color: #000;
 $h1: 28px;
 $font-family: "宋体";
 .topnavAndBanner{
+
 }
 .features {
   margin:auto;

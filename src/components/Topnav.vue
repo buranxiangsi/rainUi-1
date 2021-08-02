@@ -2,7 +2,7 @@
   <div class="topnav">
     <router-link to="/" class="logo">
       <svg class="icon">
-        <use xlink:href="#icon-hail-rain"></use>
+        <use xlink:href="#icon-rains"></use>
       </svg>
     </router-link>
     <ul class="menu">

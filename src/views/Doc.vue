@@ -68,6 +68,7 @@ $aside-index: 10;
   }
 }
 .content {
+
   display: flex;
   > aside {
     flex-shrink: 0;
@@ -76,10 +77,11 @@ $aside-index: 10;
     flex-grow: 1;
     padding: 16px;
     background: white;
+    //background: #d0cfbb;
   }
 }
 aside {
-  background: #007974;
+  background:white;
   width: 150px;
   padding: 16px 0;
   position: fixed;
@@ -100,7 +102,7 @@ aside {
         text-decoration: none;
       }
       .router-link-active{
-        background: white;
+        color: rgb(64, 169, 255);
       }
     }
   }

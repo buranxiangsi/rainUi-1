@@ -34,7 +34,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-$color: #007974;
+$color: #000;
 .topnav {
   color: $color;
   display: flex;

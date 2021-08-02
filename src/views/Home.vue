@@ -47,16 +47,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$green: #02bcb0;
 $border-radius: 4px;
-$color: #007974;
+$color: #000;
+$h1: 28px;
+$font-family: "宋体";
 .topnavAndBanner{
-  background: linear-gradient(145deg, rgba(227, 255, 253, 1) 0%, rgba(183, 233, 230, 1) 100%);
-  clip-path: ellipse(80% 60% at 50% 40%);
 }
 .features {
-  margin: 64px auto;
-  padding: 0 16px;
+  margin:auto;
+  margin-top: 140px;
+  padding: 0 20px;
+
   @media (min-width: 800px) {
     width: 800px;
     >ul{
@@ -71,13 +72,19 @@ $color: #007974;
       >li{
         width: 33.3333%;
       }
+      >li:nth-child(1){
+        border-right: 2px solid #000;
+      }
+      >li:nth-child(2){
+        border-right: 2px solid #000;
+      }
     }
   }
   >ul{
     display: flex;
     flex-wrap: wrap;
     >li{
-      margin: 16px 0;
+      margin: 30px 0;
       display: grid;
       justify-content: start;
       align-content: space-between;
@@ -86,6 +93,7 @@ $color: #007974;
         "icon text";
       grid-template-columns: 80px auto;
       grid-template-rows: 1fr auto;
+
       >svg{
         grid-area: icon;
         width: 64px;
@@ -97,6 +105,7 @@ $color: #007974;
       }
       >p{
         grid-area: text;
+        font-size: 10px;
       }
     }
   }
@@ -105,25 +114,39 @@ $color: #007974;
 
 .banner{
   color: $color;
-  padding: 100px 0;
+  padding-top: 180px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  h1{
+    font-size: $h1*2;
+    padding: 13px 0;
+    font-family: $font-family;
+    font-weight: bold;
+    letter-spacing: 40px;
+    margin-left: 40px;
+  }
+  h2{
+    letter-spacing: 10px;
+    font-size: $h1 / 1.4;
+    font-family: $font-family;
+    padding: 20px 0;
+  }
   >.actions{
-    padding: 8px 0;
+    margin: 20px 0;
+    $h: 48px;
+    background: $color;
+    height: $h;
+    line-height: $h;
     a{
       margin: 0 8px;
-      background: $green;
       color: white;
       display: inline-block;
-      $h: 28px;
-      height: $h;
-      line-height: $h;
-      border-radius: $h/2;
       padding: 0 8px;
       border-color: $border-radius;
       &:hover{
+        color: red;
         text-decoration: none;
       }
     }

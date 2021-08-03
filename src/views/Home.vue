@@ -75,10 +75,10 @@ $font-family: "宋体";
         width: 33.3333%;
       }
       >li:nth-child(1){
-        border-right: 2px solid #000;
+        border-right: 1px solid #000;
       }
       >li:nth-child(2){
-        border-right: 2px solid #000;
+        border-right: 1px solid #000;
       }
     }
   }
@@ -98,16 +98,20 @@ $font-family: "宋体";
 
       >svg{
         grid-area: icon;
-        width: 64px;
-        height: 64px;
+        width: 20px;
+        height: 40px;
+        margin-top: -20px;
+        margin-left: 40px;
+
       }
       >h3{
         grid-area: title;
-        font-size: 28px;
+        font-size: 18px;
+        padding-bottom: 10px;
       }
       >p{
         grid-area: text;
-        font-size: 10px;
+        font-size: 13px;
       }
     }
   }

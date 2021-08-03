@@ -1,10 +1,14 @@
 <template>
-  <input class="raindrop-input"/>
+  <input class="raindrop-input" :disabled="disabled"/>
 </template>
 
 <script lang="ts">
 export default {
   props:{
+    disabled:{
+      type: Boolean,
+      default: false,
+    }
   },
   setup(props){
   },

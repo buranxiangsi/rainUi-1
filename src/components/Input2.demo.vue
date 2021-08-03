@@ -1,9 +1,9 @@
 <demo>
-常规使用
+禁止使用
 </demo>
 <template>
   <div>
-    <Input placeholder="请输入内容"/>
+    <Input placeholder="请输入内容" :disabled="true"/>
   </div>
 </template>
 

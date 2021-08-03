@@ -59,7 +59,7 @@ $font-family: "宋体";
   margin:auto;
   margin-top: 140px;
   padding: 0 20px;
-
+  font-family: $font-family;
   @media (min-width: 800px) {
     width: 800px;
     >ul{

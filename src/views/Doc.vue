@@ -75,9 +75,16 @@ $aside-index: 10;
   }
   > main {
     flex-grow: 1;
-    padding: 16px;
+    padding:16px 0;
     background: white;
-    //background: #d0cfbb;
+  }
+  @media (min-width: 1200px) {
+    width: 1200px;
+
+    main{
+      padding: 0 20px;
+      margin-left: 190px;
+    }
   }
 }
 aside {

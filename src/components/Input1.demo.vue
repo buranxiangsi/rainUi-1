@@ -3,7 +3,7 @@
 </demo>
 <template>
   <div>
-    <Input placeholder="请输入内容"/>
+    <Input v-model="input1" placeholder="请输入内容"/>
   </div>
 </template>
 
@@ -12,6 +12,12 @@ import Input from "../lib/Input.vue";
 export default {
   components: {
     Input,
+  },
+  data(){
+    return{
+      input1:''
+    }
   }
+
 }
 </script>

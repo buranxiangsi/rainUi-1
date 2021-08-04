@@ -3,7 +3,7 @@
 </demo>
 <template>
   <div>
-    <Input placeholder="请输入内容" :disabled="true"/>
+    <Input v-model="input2" placeholder="请输入内容" disabled/>
   </div>
 </template>
 
@@ -12,6 +12,11 @@ import Input from "../lib/Input.vue";
 export default {
   components: {
     Input,
+  },
+  data(){
+    return{
+      input2:''
+    }
   }
 }
 </script>

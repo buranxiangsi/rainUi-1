@@ -67,6 +67,7 @@ $aside-index: 10;
     padding-left: 156px;
     @media (max-width: 500px) {
       padding-left: 0;
+      margin: 10px;
     }
   }
 }
@@ -80,6 +81,7 @@ $aside-index: 10;
     flex-grow: 1;
     padding:16px 0;
     background: white;
+    margin: 10px;
   }
   @media (min-width: 1200px) {
     width: 1200px;

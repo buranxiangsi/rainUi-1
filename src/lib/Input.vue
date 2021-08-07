@@ -59,6 +59,7 @@ $grey: grey;
     padding:10px 14px;
     border: 1px solid $border-color;
     border-radius: $border-radius;
+    margin: 10px 0;
     &[disabled]{
       cursor: not-allowed;
       color: $grey;

@@ -2,7 +2,6 @@
  <button class="raindrop-button" :class="classes" :disabled="disabled">
    <span v-if="loading" class="raindrop-loadingIndicator"></span>
    <slot />
-
  </button>
 </template>
 
@@ -22,7 +21,7 @@ export default {
       type: String,
       default:"normal",
     },
-    disable:{
+    disabled:{
       type: Boolean,
       default: false,
     },

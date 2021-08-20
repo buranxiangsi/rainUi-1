@@ -1,22 +1,23 @@
 <demo>
-禁止使用
+清空
 </demo>
 <template>
   <div>
-    <Input v-model="input" placeholder="请输入内容" disabled/>
+    <Input v-model:value="input" clearable placeholder="请输入内容" />
   </div>
 </template>
 
 <script lang="ts">
 import { Input } from "../lib/index";
 export default {
+
+  data(){
+    return{
+      input:"Hello World",
+    }
+  },
   components: {
     Input,
   },
-  data(){
-    return{
-      input:''
-    }
-  }
 }
 </script>

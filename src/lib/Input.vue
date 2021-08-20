@@ -4,10 +4,13 @@
            :class="classes"
            :disabled="disabled"
            :placeholder="placeholder"
-
-
-
+           :clearable="clearable"
+           :value="value"
     />
+    <span>
+       <i v-if="clearable" class="raindrop-input-icon" @click="showClear"><slot/></i>
+    </span>
+
   </div>
 
 </template>
@@ -30,7 +33,7 @@ export default {
       default:'normal'
     },
     placeholder:String,
-
+    value: String
   },
   setup(props){
     const { size } = props
@@ -39,7 +42,14 @@ export default {
         [`raindrop-size-${size}`]: size,
       }
     })
-    return { classes }
+
+    const showClear=()=>{
+    }
+
+    return {
+      classes,
+      showClear,
+    }
   }
 
 }
@@ -54,9 +64,9 @@ $grey: grey;
   display: inline-block;
   margin-right: 10px;
   .raindrop-input{
-    width: 160px;
+    width: 200px;
     height: 35px;
-    padding:10px 14px;
+    padding:10px 18px;
     border: 1px solid $border-color;
     border-radius: $border-radius;
     margin: 10px 0;
@@ -74,7 +84,7 @@ $grey: grey;
   }
   .raindrop-size-small{
     width: 120px;
-    height: 25px;
+    height: 30px;
   }
   input:focus{
     outline: none;
@@ -85,8 +95,18 @@ $grey: grey;
     border: 1px solid $borderColor;
 
   }
-
-
+  .raindrop-input-icon{
+    display: inline-block;
+    position: relative;
+    margin:0 2px;
+    top: -4px;
+    right: 17px;
+    height: 1px;
+    width: 10px;
+    outline: none;
+    border: 1px solid $grey;
+    background: $grey;
+  }
 }
 
 

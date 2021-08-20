@@ -5,8 +5,8 @@
            :disabled="disabled"
            :placeholder="placeholder"
            :clearable="clearable"
-           :value="value"
-           @input="$emit('input',$event.target.value)"
+           :value="modelValue"
+           @input="$emit('update:modelValue',$event.target.value)"
     />
     <Button v-if="clearable" class="raindrop-input-button" @click="showClear">清除</Button>
   </div>
@@ -33,9 +33,10 @@ export default {
       default:'normal'
     },
     placeholder:{type:String},
-    value: {type:String},
+    modelValue: {type:String},
     showClear:{type:Function}
   },
+  emits:['update:modelValue'],
   setup(props,context){
     const { size } = props
     const classes = computed(()=>{
@@ -45,7 +46,6 @@ export default {
     })
     const showClear=()=>{
       console.log(context.emit);
-      context.emit('clear')
     }
 
     return {

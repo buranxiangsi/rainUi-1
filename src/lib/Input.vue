@@ -6,19 +6,19 @@
            :placeholder="placeholder"
            :clearable="clearable"
            :value="value"
+           @input="$emit('input',$event.target.value)"
     />
-    <span>
-       <i v-if="clearable" class="raindrop-input-icon" @click="showClear"><slot/></i>
-    </span>
-
+    <Button v-if="clearable" class="raindrop-input-button" @click="showClear">清除</Button>
   </div>
 
 </template>
 
 <script lang="ts">
 import { computed } from "vue";
+import Button from "./Button.vue";
 
 export default {
+  components: {Button},
   props:{
     disabled:{
       type: Boolean,
@@ -32,25 +32,28 @@ export default {
       type: String,
       default:'normal'
     },
-    placeholder:String,
-    value: String
+    placeholder:{type:String},
+    value: {type:String},
+    showClear:{type:Function}
   },
-  setup(props){
+  setup(props,context){
     const { size } = props
     const classes = computed(()=>{
       return {
         [`raindrop-size-${size}`]: size,
       }
     })
-
     const showClear=()=>{
+      console.log(context.emit);
+      context.emit('clear')
     }
 
     return {
       classes,
-      showClear,
+      showClear
     }
   }
+
 
 }
 </script>
@@ -69,7 +72,6 @@ $grey: grey;
     padding:10px 18px;
     border: 1px solid $border-color;
     border-radius: $border-radius;
-    margin: 10px 0;
     &[disabled]{
       cursor: not-allowed;
       color: $grey;
@@ -95,17 +97,12 @@ $grey: grey;
     border: 1px solid $borderColor;
 
   }
-  .raindrop-input-icon{
+  .raindrop-input-button{
     display: inline-block;
-    position: relative;
-    margin:0 2px;
-    top: -4px;
-    right: 17px;
-    height: 1px;
-    width: 10px;
-    outline: none;
-    border: 1px solid $grey;
-    background: $grey;
+    margin-left: 10px ;
+    height: 34px;
+    line-height: 20px;
+    font-size: 15px;
   }
 }
 

@@ -3,7 +3,7 @@
 </demo>
 <template>
   <div>
-    <Input v-model="input" clearable placeholder="请输入内容" />
+    <Input v-model="input" clearable placeholder="请输入内容"/>
   </div>
 </template>
 
@@ -19,5 +19,6 @@ export default {
   components: {
     Input,
   },
+
 }
 </script>

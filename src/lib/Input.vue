@@ -6,7 +6,7 @@
            :placeholder="placeholder"
            :clearable="clearable"
            :value="modelValue"
-           @input="$emit('update:modelValue',$event.target.value)"
+           @input="onInput"
     />
     <Button v-if="clearable" class="raindrop-input-button" @click="onClick">清除</Button>
   </div>
@@ -35,6 +35,7 @@ export default {
     placeholder:{type:String},
     modelValue: {type:String},
     onClick:{type:Function},
+    onInput:{type:Function}
 
   },
   emits:['update:modelValue'],
@@ -45,12 +46,16 @@ export default {
         [`raindrop-size-${size}`]: size,
       }
     })
+    const onInput = (e)=>{
+      context.emit('update:modelValue', e.target.value)
+    }
     const onClick=(e)=>{
       context.emit('update:modelValue', e.target.value)
     }
     return {
       classes,
-      onClick
+      onClick,
+      onInput
     }
   }
 

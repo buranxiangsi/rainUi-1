@@ -1,5 +1,5 @@
 <demo>
-基础布局
+分栏间隔
 </demo>
 <template>
    

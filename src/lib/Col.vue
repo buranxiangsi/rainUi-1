@@ -17,13 +17,9 @@ export default {
       type: Number,
       default: 24
     },
+    
+    
   },
-  data(){
-    return{
-      gutter:0
-    }
-  },
-  
   setup(props){
     const { span} = props
     
@@ -32,10 +28,26 @@ export default {
         [`raindrop-col-${span}`]: span,
       }
     })
-    const styles = computed(()=>{
-    })
-    return { classes,styles }
+    
+    return { classes }
   },
+  computed:{
+    gutter(){
+      // 获取父组件props.gutter值
+      let parent = this.$parent.$props.gutter;
+      return parent 
+    },
+    styles(){
+      const style:any={}
+      if(this.gutter !=0){
+        style.paddingLeft = this.gutter / 2 +'px';
+        style.paddingRight = style.paddingLeft;
+      }
+      return style
+    }
+  },
+  
+  
   
 }
 </script>

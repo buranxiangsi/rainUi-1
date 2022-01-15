@@ -1,5 +1,9 @@
 <template>
- <div :span="span" class="raindrop-col" :class="classes">
+ <div :span="span" 
+      class="raindrop-col" 
+      :class="classes" 
+      :style="styles"
+      >
   <slot>
  </div>
  
@@ -12,17 +16,25 @@ export default {
     span:{
       type: Number,
       default: 24
+    },
+  },
+  data(){
+    return{
+      gutter:0
     }
   },
-   setup(props){
+  
+  setup(props){
     const { span} = props
+    
     const classes = computed(()=>{
       return {
-        
         [`raindrop-col-${span}`]: span,
       }
     })
-    return { classes }
+    const styles = computed(()=>{
+    })
+    return { classes,styles }
   },
   
 }

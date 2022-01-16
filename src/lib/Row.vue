@@ -13,7 +13,6 @@ export default {
   },
   setup(props){
     const {  gutter, type,justify } = props
-    console.log(props)
     const styles = computed(()=>{
       const style:any = {}
       if(gutter){

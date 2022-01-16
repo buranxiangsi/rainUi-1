@@ -2,9 +2,11 @@
 基础布局
 </demo>
 <template>
+<div>
     <Row>
       <Col :span="24" ><div class="flex-content bg-purple-dark"></div></Col>
     </Row>
+
     <Row>
       <Col :span="12" ><div class="flex-content bg-purple"></div></Col>
       <Col :span="12" ><div class="flex-content bg-purple-light"></div></Col>
@@ -28,6 +30,8 @@
       <Col :span="4" ><div class="flex-content bg-purple"></div></Col>
       <Col :span="4" ><div class="flex-content bg-purple-light"></div></Col>
     </Row>
+
+</div>
 </template>
 
 <script lang="ts">
@@ -44,9 +48,6 @@ export default {
 <style lang="scss">
 .raindrop-row {
     margin-bottom: 20px;
-    &:last-child {
-      margin-bottom: 0;
-    }
   }
   .raindrop-col {
     border-radius: 4px;

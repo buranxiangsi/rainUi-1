@@ -1,17 +1,20 @@
 <demo>
-分栏间隔
+分栏偏移
 </demo>
 <template>
-   
-     <div>
+    <div>
+      <Row :gutter=20 >
+        <Col :span="6" ><div class="flex-content bg-purple"></div></Col>
+        <Col :span="6" :offset="6"><div class="flex-content bg-purple-light"></div></Col>
+      </Row>
        <Row :gutter=20 >
-        <Col :span="6" ><div class="flex-content bg-purple"></div></Col>
-        <Col :span="6" ><div class="flex-content bg-purple-light"></div></Col>
-        <Col :span="6" ><div class="flex-content bg-purple"></div></Col>
-        <Col :span="6" ><div class="flex-content bg-purple-light"></div></Col>
-           </Row>
-     </div>
-    
+        <Col :span="6" :offset="6"><div class="flex-content bg-purple"></div></Col>
+        <Col :span="6" :offset="6"><div class="flex-content bg-purple-light"></div></Col>
+      </Row>
+      <Row :gutter=20 >
+        <Col :span="12" :offset="6"><div class="flex-content bg-purple"></div></Col>
+      </Row>
+    </div>
 </template>
 
 <script lang="ts">
@@ -26,7 +29,7 @@ export default {
 </script>
 
 <style lang="scss">
-.raindrop-row {
+  .raindrop-row {
     margin-bottom: 20px;
   }
   .raindrop-col {
@@ -41,7 +44,7 @@ export default {
   .bg-purple-light {
     background: #e5e9f2;
   }
-  .flex-content {
+  .grid-content {
     border-radius: 4px;
     min-height: 36px;
   }

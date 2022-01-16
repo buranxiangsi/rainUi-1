@@ -1,10 +1,11 @@
 <template>
  <div :span="span" 
+      :offset="offset"
       class="raindrop-col" 
       :class="classes" 
       :style="styles"
       >
-  <slot>
+  <slot></slot>
  </div>
  
 </template>
@@ -15,17 +16,21 @@ export default {
   props:{
     span:{
       type: Number,
-      default: 24
+      default: 0
     },
+    offset:Number
+
     
     
   },
   setup(props){
-    const { span} = props
+    const { span,offset} = props
     
     const classes = computed(()=>{
       return {
         [`raindrop-col-${span}`]: span,
+        [`raindrop-col-offset-${offset}`]: offset,
+
       }
     })
     // const gutter =computed(()=>{
@@ -87,5 +92,9 @@ export default {
 }
 .raindrop-col-4{
   width: 16.667%;
+}
+.raindrop-col-offset-6{
+  margin-left: 25%;
+  
 }
 </style>

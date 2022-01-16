@@ -1,8 +1,5 @@
 <template>
-<div class="raindrop-input-wrapper">
- <div class="raindrop-row"  :style="styles"><slot></div>
-</div>
- 
+ <div class="raindrop-row"  :style="styles"><slot></slot></div>
 </template>
 
 <script lang="ts">
@@ -41,13 +38,8 @@ export default {
 </script>
 
 <style lang="scss">
-.raindrop-input-wrapper{
-  display: inline;
-  margin-right: 10px;
-  .raindrop-row {
-  box-sizing: border-box;
+.raindrop-row {
+  display: -webkit-box;
+  
   }
-
-}
-
 </style>

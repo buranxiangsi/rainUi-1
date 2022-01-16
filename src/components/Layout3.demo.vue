@@ -2,22 +2,24 @@
 混合布局
 </demo>
 <template>
-    <Row :gutter=20 >
-      <Col :span="16" ><div class="flex-content bg-purple"></div></Col>
-      <Col :span="8" ><div class="flex-content bg-purple-light"></div></Col>
-    </Row>
-    <Row :gutter=20 >
-      <Col :span="8" ><div class="flex-content bg-purple"></div></Col>
-      <Col :span="8" ><div class="flex-content bg-purple-light"></div></Col>
-      <Col :span="4" ><div class="flex-content bg-purple"></div></Col>
-      <Col :span="4" ><div class="flex-content bg-purple-light"></div></Col>
-    </Row>
-    <Row :gutter=20 >
-      <Col :span="4" ><div class="flex-content bg-purple"></div></Col>
-      <Col :span="16" ><div class="flex-content bg-purple-light"></div></Col>
-      <Col :span="4" ><div class="flex-content bg-purple"></div></Col>
-    </Row>
-    
+    <div>
+      <Row :gutter=20 >
+        <Col :span="16" ><div class="flex-content bg-purple"></div></Col>
+        <Col :span="8" ><div class="flex-content bg-purple-light"></div></Col>
+      </Row>
+      <Row :gutter=20 >
+        <Col :span="8" ><div class="flex-content bg-purple"></div></Col>
+        <Col :span="8" ><div class="flex-content bg-purple-light"></div></Col>
+        <Col :span="4" ><div class="flex-content bg-purple"></div></Col>
+        <Col :span="4" ><div class="flex-content bg-purple-light"></div></Col>
+      </Row>
+      <Row :gutter=20 >
+        <Col :span="4" ><div class="flex-content bg-purple"></div></Col>
+        <Col :span="16" ><div class="flex-content bg-purple-light"></div></Col>
+        <Col :span="4" ><div class="flex-content bg-purple"></div></Col>
+      </Row>
+      
+    </div>
 </template>
 
 <script lang="ts">
@@ -34,9 +36,6 @@ export default {
 <style lang="scss">
 .raindrop-row {
     margin-bottom: 20px;
-    &:last-child {
-      margin-bottom: 0;
-    }
   }
   .raindrop-col {
     border-radius: 4px;

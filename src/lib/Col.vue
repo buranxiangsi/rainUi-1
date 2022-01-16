@@ -24,7 +24,7 @@ export default {
     
   },
   setup(props){
-    const { span,offset} = props
+    const { span, offset} = props
     
     const classes = computed(()=>{
       return {

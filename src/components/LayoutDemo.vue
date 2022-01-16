@@ -4,6 +4,7 @@
   <Demo :component="LayoutDemo2" />
   <Demo :component="LayoutDemo3" />
   <Demo :component="LayoutDemo4" />
+  <Demo :component="LayoutDemo5" />
 
 
 </template>
@@ -14,6 +15,8 @@ import LayoutDemo1 from "./Layout1.demo.vue"
 import LayoutDemo2 from "./Layout2.demo.vue"
 import LayoutDemo3 from "./Layout3.demo.vue"
 import LayoutDemo4 from "./Layout4.demo.vue"
+import LayoutDemo5 from "./Layout5.demo.vue"
+
 
 
 export default {
@@ -24,6 +27,8 @@ export default {
       LayoutDemo2,
       LayoutDemo3,
       LayoutDemo4,
+      LayoutDemo5,
+
 
 
     }

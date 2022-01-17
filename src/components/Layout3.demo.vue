@@ -1,5 +1,5 @@
 <demo>
-混合布局
+混合
 </demo>
 <template>
     <div>

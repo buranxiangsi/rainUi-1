@@ -1,5 +1,5 @@
 <demo>
-分栏偏移
+偏移
 </demo>
 <template>
     <div>

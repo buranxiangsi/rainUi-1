@@ -1,5 +1,5 @@
 <demo>
-对齐方式
+对齐
 </demo>
 <template>
     <div>

@@ -1,5 +1,5 @@
 <demo>
-基础布局
+基础
 </demo>
 <template>
 <div>

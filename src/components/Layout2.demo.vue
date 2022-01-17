@@ -1,5 +1,5 @@
 <demo>
-分栏间隔
+间隔
 </demo>
 <template>
    

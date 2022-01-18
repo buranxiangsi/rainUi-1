@@ -64,7 +64,15 @@ export default {
         `${prefixCls}-input`
       ]
     })
+  
+    return{
+      wrapClass,
+      radioClass,
+      innerClass,
+      inputClass
+    }
   }
+  
 }
 </script>
 

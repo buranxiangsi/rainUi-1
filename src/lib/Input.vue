@@ -38,7 +38,7 @@ export default {
     onInput:{type:Function}
 
   },
-  emits:['update:modelValue'],
+  // emits:['update:modelValue'],
   setup(props,context){
     const { size } = props
     const classes = computed(()=>{

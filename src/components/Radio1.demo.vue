@@ -3,8 +3,8 @@
 </demo>
 
 <template>
-  <Radio></Radio>
-  <Radio></Radio>
+  <Radio v-model="radio" label="1">备选项</Radio>
+  <Radio v-model="radio" label="2">备选项</Radio>
 </template>
 
 <script lang="ts">
@@ -13,5 +13,10 @@ export default {
   components: {
     Radio,
   },
+  data(){
+    return {
+      radio:'1'
+    }
+  }
 }
 </script>

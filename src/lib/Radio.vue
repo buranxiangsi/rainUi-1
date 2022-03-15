@@ -1,14 +1,12 @@
 <template>
-<label :class="wrapClass"  >
-  <span :class="radioClass">
-    <span :class="innerClass"></span>
+<label class="raindrop-radio-wrapper" :class="[{'is-checked':model===label},{'disabled':disabled}]" >
+  <span class="raindrop-radio" :class="[{'is-checked':model===label},{'disabled':disabled}]">
+    <span class="raindrop-radio-inner" :class="[{'is-checked':model===label},{'disabled':disabled}]"></span>
      <input type="radio" 
-            :class="inputClass"
-         
-            
-            
-
-            
+            class="raindrop-radio-input"
+            :value="label"
+            v-model="model"
+            :disabled = "disabled"
       />
   </span>
   <span><slot></slot></span>
@@ -22,56 +20,20 @@ export default {
   props:{
     label:{},
     value: {},
-    modelValue:[String, Number, Boolean],
     checked:Boolean,
-    trueValue:{
-      type: Boolean,
-      default: true
-    },
-    falseValue:{
-      type: Boolean,
-      default: false
-    }
-    
-    
-
+    disabled:Boolean
   },
-  setup(props,context){
-    console.log(props)
-    const prefixCls = 'raindrop-radio'
-    const wrapClass = computed(()=>{
-      return[
-        `${prefixCls}-wrapper`,
-        {
-        }
-      ]
-    })
-    const radioClass = computed(()=>{
-      return [
-        `${prefixCls}`,
-        {
-        }
-      ]
-    })
-    const innerClass = computed(()=>{
-      return [
-        `${prefixCls}-inner`,
-        {[`${prefixCls}-inner-checked`]:props.trueValue,}
-      ]
-    })
-    const inputClass = computed(()=>{
-      return [
-        `${prefixCls}-input`
-      ]
-    })
-  
-    return{
-      wrapClass,
-      radioClass,
-      innerClass,
-      inputClass
+  computed: {
+    model:{
+      get(){
+        return this.value
+      },
+      set(val){
+        this.$emit('update:value',val)
+      }
     }
-  }
+  },
+ 
   
 }
 </script>
@@ -102,10 +64,6 @@ export default {
         background-color: #fff;
         cursor: pointer;
         display: inline-block;
-        transition: all .2s ease-in-out;
-      }
-      .raindrop-radio-inner-checked{
-        border:5px solid rgb(24, 144, 255);
       }
       .raindrop-radio-input{
         opacity: 0;
@@ -121,7 +79,20 @@ export default {
 
       }
     } 
+    .raindrop-radio-inner.is-checked{
+        border:5px solid rgb(24, 144, 255);
+      }
+    .raindrop-radio-inner.disabled{
+        background-color: #f5f7fa;
+        border-color: #e4e7ed;
+        cursor: not-allowed
+      }
     
+}
+.raindrop-radio-wrapper.disabled{
+  color: #939393;
+  border-color: #e4e7ed;
+  cursor: not-allowed
 }
 
 

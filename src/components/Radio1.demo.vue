@@ -3,8 +3,8 @@
 </demo>
 
 <template>
-  <Radio v-model="radio" label="1">备选项</Radio>
-  <Radio v-model="radio" label="2">备选项</Radio>
+  <Radio v-model:value="radio" label="1">备选项</Radio>
+  <Radio v-model:value="radio" label="2">备选项</Radio>
 </template>
 
 <script lang="ts">

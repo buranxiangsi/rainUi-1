@@ -126,7 +126,7 @@ $font-family: "宋体";
   align-items: center;
   flex-direction: column;
   h1{
-    font-size: $h1*2;
+    font-size: $h1 * 2;
     padding: 13px 0;
     font-family: $font-family;
     font-weight: bold;

@@ -25,10 +25,10 @@ $h: 22px;
 $h2: $h - 4px;
 .raindrop-switch{
   height: $h;
-  width: $h*2;
+  width: $h * 2;
   border: none;
   background: #bfbfbf;
-  border-radius: $h/2;
+  border-radius: $h / 2;
   position: relative;
 
   > span{
